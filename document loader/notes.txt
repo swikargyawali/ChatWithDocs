@@ -1,0 +1,456 @@
+=========================================
+INTRODUCTION TO AI ENGINEERING
+=========================================
+
+Artificial Intelligence (AI) Engineering is the discipline of designing, building, deploying, and maintaining intelligent software systems that can solve real-world problems. It combines software engineering, machine learning, data engineering, cloud computing, and MLOps to create production-ready AI applications.
+
+Unlike traditional software development, AI systems learn patterns from data instead of relying entirely on manually written rules.
+
+--------------------------------------------------
+WHAT IS ARTIFICIAL INTELLIGENCE?
+--------------------------------------------------
+
+Artificial Intelligence refers to computer systems capable of performing tasks that normally require human intelligence. These tasks include:
+
+- Understanding language
+- Recognizing images
+- Making decisions
+- Predicting future outcomes
+- Learning from experience
+- Generating text, images, audio, and code
+
+Modern AI is powered mainly by Machine Learning and Deep Learning algorithms.
+
+--------------------------------------------------
+MACHINE LEARNING
+--------------------------------------------------
+
+Machine Learning (ML) is a subset of Artificial Intelligence where algorithms learn from data.
+
+Instead of explicitly programming every rule, a machine learning model identifies patterns and uses those patterns to make predictions.
+
+Main types of Machine Learning:
+
+1. Supervised Learning
+   - Uses labeled data
+   - Example:
+     House price prediction
+     Email spam detection
+
+2. Unsupervised Learning
+   - Uses unlabeled data
+   - Example:
+     Customer segmentation
+     Clustering
+
+3. Reinforcement Learning
+   - Learns by interacting with an environment
+   - Receives rewards and penalties
+   - Example:
+     Robotics
+     Game-playing AI
+
+--------------------------------------------------
+DEEP LEARNING
+--------------------------------------------------
+
+Deep Learning is a specialized branch of Machine Learning that uses Artificial Neural Networks with multiple layers.
+
+Applications include:
+
+- Image Classification
+- Object Detection
+- Speech Recognition
+- Machine Translation
+- Large Language Models
+
+Popular frameworks:
+
+- TensorFlow
+- PyTorch
+- JAX
+
+--------------------------------------------------
+NATURAL LANGUAGE PROCESSING (NLP)
+--------------------------------------------------
+
+Natural Language Processing focuses on enabling computers to understand and generate human language.
+
+Common NLP tasks include:
+
+- Sentiment Analysis
+- Text Classification
+- Named Entity Recognition
+- Translation
+- Summarization
+- Question Answering
+
+Modern NLP heavily relies on Transformer architectures.
+
+--------------------------------------------------
+TRANSFORMERS
+--------------------------------------------------
+
+Transformers revolutionized AI in 2017 through the paper:
+
+"Attention Is All You Need"
+
+Key concepts:
+
+- Self-Attention
+- Multi-Head Attention
+- Positional Encoding
+- Encoder
+- Decoder
+
+Transformers outperform previous architectures like RNNs and LSTMs for most NLP tasks.
+
+--------------------------------------------------
+LARGE LANGUAGE MODELS (LLMs)
+--------------------------------------------------
+
+Large Language Models are transformer-based neural networks trained on massive amounts of text.
+
+Examples include:
+
+- GPT
+- Claude
+- Gemini
+- Llama
+- Mistral
+- DeepSeek
+
+Capabilities:
+
+- Text generation
+- Coding assistance
+- Summarization
+- Translation
+- Question Answering
+- Reasoning
+- Data extraction
+
+Limitations:
+
+- Hallucinations
+- Outdated knowledge
+- Context window limitations
+- Bias
+
+--------------------------------------------------
+PROMPT ENGINEERING
+--------------------------------------------------
+
+Prompt Engineering is the process of designing effective prompts for AI models.
+
+Good prompts often include:
+
+- Role
+- Task
+- Context
+- Constraints
+- Output format
+
+Example:
+
+"You are an AI tutor. Explain gradient descent in simple terms using an analogy."
+
+--------------------------------------------------
+EMBEDDINGS
+--------------------------------------------------
+
+Embeddings convert text into numerical vectors.
+
+These vectors capture semantic meaning.
+
+For example:
+
+"Dog"
+
+and
+
+"Puppy"
+
+have embedding vectors that are close together.
+
+Embeddings enable:
+
+- Semantic Search
+- Recommendation Systems
+- Retrieval-Augmented Generation
+- Duplicate Detection
+
+Popular embedding models:
+
+- OpenAI text-embedding models
+- BGE
+- E5
+- Sentence Transformers
+
+--------------------------------------------------
+VECTOR DATABASES
+--------------------------------------------------
+
+Vector databases store embedding vectors for efficient similarity search.
+
+Popular vector databases include:
+
+- ChromaDB
+- Pinecone
+- Weaviate
+- FAISS
+- Milvus
+- Qdrant
+
+Similarity metrics:
+
+- Cosine Similarity
+- Euclidean Distance
+- Dot Product
+
+--------------------------------------------------
+RETRIEVAL-AUGMENTED GENERATION (RAG)
+--------------------------------------------------
+
+Retrieval-Augmented Generation combines information retrieval with Large Language Models.
+
+Workflow:
+
+Documents
+      ↓
+Document Loader
+      ↓
+Text Splitter
+      ↓
+Embeddings
+      ↓
+Vector Database
+      ↓
+Retriever
+      ↓
+Relevant Chunks
+      ↓
+Large Language Model
+      ↓
+Final Answer
+
+Benefits:
+
+- Reduces hallucinations
+- Uses private knowledge
+- No model retraining required
+- Supports up-to-date information
+
+--------------------------------------------------
+DOCUMENT LOADERS
+--------------------------------------------------
+
+A Document Loader is responsible for reading data from different file formats.
+
+Common document types:
+
+- TXT
+- PDF
+- DOCX
+- CSV
+- HTML
+- Markdown
+
+Its responsibility is only to load documents into memory.
+
+--------------------------------------------------
+TEXT SPLITTING
+--------------------------------------------------
+
+Large documents are divided into smaller chunks.
+
+Reasons:
+
+- LLM context window limitations
+- Better retrieval accuracy
+- Faster embedding generation
+
+Common chunk sizes:
+
+- 500 characters
+- 1000 characters
+- 1500 characters
+
+Chunk overlap helps preserve context between adjacent chunks.
+
+--------------------------------------------------
+EMBEDDING GENERATION
+--------------------------------------------------
+
+Each chunk is converted into a dense vector.
+
+Example:
+
+Chunk
+
+↓
+
+Embedding Model
+
+↓
+
+Vector
+
+↓
+
+Store in Vector Database
+
+--------------------------------------------------
+RETRIEVAL
+--------------------------------------------------
+
+When a user asks a question:
+
+1. Convert question into embedding.
+2. Search vector database.
+3. Retrieve most relevant chunks.
+4. Send retrieved chunks to LLM.
+
+--------------------------------------------------
+GENERATION
+--------------------------------------------------
+
+The LLM generates an answer using:
+
+- Retrieved context
+- User question
+
+This greatly improves factual accuracy.
+
+--------------------------------------------------
+MLOPS
+--------------------------------------------------
+
+MLOps is the practice of deploying and maintaining AI systems.
+
+Components:
+
+- Model Versioning
+- Experiment Tracking
+- CI/CD
+- Monitoring
+- Data Validation
+- Automated Deployment
+
+Popular tools:
+
+- MLflow
+- Docker
+- Kubernetes
+- GitHub Actions
+- Weights & Biases
+
+--------------------------------------------------
+AI AGENTS
+--------------------------------------------------
+
+AI Agents are autonomous systems that:
+
+- Understand goals
+- Plan tasks
+- Use tools
+- Retrieve information
+- Execute actions
+- Reflect on results
+
+Examples:
+
+- Coding assistants
+- Research assistants
+- Customer support bots
+- Personal assistants
+
+--------------------------------------------------
+COMMON AI ENGINEERING TECH STACK
+--------------------------------------------------
+
+Programming:
+- Python
+
+Libraries:
+- NumPy
+- Pandas
+- Scikit-Learn
+- PyTorch
+- TensorFlow
+
+LLM Frameworks:
+- LangChain
+- LlamaIndex
+- Haystack
+
+Vector Databases:
+- ChromaDB
+- Pinecone
+- FAISS
+- Qdrant
+
+LLM Providers:
+- OpenAI
+- Anthropic
+- Google
+- Groq
+- Together AI
+
+Deployment:
+- FastAPI
+- Docker
+- Kubernetes
+
+Cloud:
+- AWS
+- Azure
+- Google Cloud
+
+--------------------------------------------------
+REAL-WORLD AI APPLICATIONS
+--------------------------------------------------
+
+Healthcare:
+- Disease prediction
+- Medical imaging
+
+Finance:
+- Fraud detection
+- Credit scoring
+
+Education:
+- Personalized tutoring
+- Automated grading
+
+Retail:
+- Product recommendations
+- Demand forecasting
+
+Cybersecurity:
+- Threat detection
+- Malware analysis
+
+Manufacturing:
+- Predictive maintenance
+- Quality inspection
+
+--------------------------------------------------
+FUTURE OF AI ENGINEERING
+--------------------------------------------------
+
+Future AI systems will increasingly include:
+
+- Autonomous AI Agents
+- Multimodal AI
+- Robotics
+- Edge AI
+- AI Operating Systems
+- Human-AI collaboration
+- Enterprise AI Automation
+
+The demand for AI Engineers continues to grow as organizations adopt intelligent systems across industries.
+
+=========================================
+END OF NOTES
+=========================================

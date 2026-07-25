@@ -34,5 +34,5 @@ model= ChatMistralAI (model="mistral-small-2603")
 
 prompt=template.format_messages(loader= documents[0].page_content)
 
-result= model.invoke("Helloo")
+result= model.invoke(prompt)
 print(result.content)

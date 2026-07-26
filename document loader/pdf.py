@@ -1,7 +1,7 @@
 from langchain_community.document_loaders import PyPDFLoader
 
-data= PyPDFLoader("RAG system.pdf")
+loader= PyPDFLoader("RAG system.pdf")
 
-documents=data.load()
+documents=loader.load()
 
 print(documents[17])

@@ -1,8 +1,18 @@
 from langchain_community.document_loaders import TextLoader
 
-loader=TextLoader("notes.txt")
+from langchain_text_splitters import CharacterTextSplitter
 
-documents= loader.load()
+splitter=CharacterTextSplitter(
+    separator="\n\n",
+    chunk_size=1000,
+    chunk_overlap=200,
+)
+
+loader=TextLoader("notes.txt")
+documents=loader.load()
+
+
+chunks=splitter.split_documents(documents)
 
 # The `load()` method returns a list of Document objects.
 #
@@ -21,6 +31,6 @@ documents= loader.load()
 # Since `load()` always returns a list, we access the first document using:
 # documents[0]
 
-print(len(documents))
+print(chunks)
 
 

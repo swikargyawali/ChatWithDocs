@@ -32,6 +32,9 @@ chunks=splitter.split_documents(documents)
 # Since `load()` always returns a list, we access the first document using:
 # documents[0]
 
-print(chunks)
-
+for i in chunks:
+    print(i.page_content)
+    print()
+    print()
+    print()
 

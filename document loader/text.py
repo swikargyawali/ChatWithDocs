@@ -14,6 +14,7 @@ documents=loader.load()
 
 chunks=splitter.split_documents(documents)
 
+
 # The `load()` method returns a list of Document objects.
 #
 # Why a list?

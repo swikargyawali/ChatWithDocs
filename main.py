@@ -43,4 +43,4 @@ print(result.content)
 # Context Window:
 # In a RAG system, the retrieved document chunks are sent to the LLM as context.
 # Since every LLM has a limited context window, only the most relevant chunks
-# can be included in a single request to ensure accurate and efficient responses.
+# can be included in a single request to ensure accurate and efficient responses
